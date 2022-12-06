@@ -1,24 +1,131 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--CallingVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="CallingVC" customModule="hemenSaglik" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hemenSaglik" translatesAutoresizingMaskIntoConstraints="NO" id="eg0-UK-wFw">
+                                <rect key="frame" x="111" y="121" width="175" height="175"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="175" id="zun-8N-Cxb"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fYC-fn-W46">
+                                <rect key="frame" x="103" y="549" width="190" height="190"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.33228844400000002" green="0.67281115059999996" blue="0.93126696350000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled"/>
+                            </button>
+                            <button opaque="NO" userInteractionEnabled="NO" alpha="0.55000000000000004" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ydx-5J-fwm">
+                                <rect key="frame" x="88" y="534" width="220" height="220"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.33228844400000002" green="0.67281115059999996" blue="0.93126696350000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="2"/>
+                                <connections>
+                                    <action selector="callAmbulanceButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="W3a-9m-zhk"/>
+                                </connections>
+                            </button>
+                            <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bup-ud-VCR">
+                                <rect key="frame" x="118" y="564" width="160" height="160"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.33228844400000002" green="0.67281115059999996" blue="0.93126696350000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Hemen Çağır"/>
+                                <connections>
+                                    <action selector="callAmbulanceButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="InX-SZ-dnb"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tekrar Hoşgeldiniz..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ivk-3g-wVu">
+                                <rect key="frame" x="16" y="73" width="198" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="goN-Ep-Q2g"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Alttaki butona basarak konumunuza acil desteği bekleyin" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BGw-mY-k0S">
+                                <rect key="frame" x="63" y="422" width="271" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="Vco-8J-WP2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Acil Duruma Mısın?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wMt-wa-ZNh">
+                                <rect key="frame" x="46" y="384" width="304" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="jRQ-vq-a3H"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="wMt-wa-ZNh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="46" id="3CS-ht-Hld"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BGw-mY-k0S" secondAttribute="trailing" constant="59" id="4ow-HA-7UF"/>
+                            <constraint firstItem="eg0-UK-wFw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="111" id="9LF-fa-Gvp"/>
+                            <constraint firstItem="BGw-mY-k0S" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="63" id="BeX-KC-hbk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ivk-3g-wVu" secondAttribute="trailing" constant="179" id="EzH-98-O8Y"/>
+                            <constraint firstItem="ivk-3g-wVu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="14" id="GQK-Po-9O6"/>
+                            <constraint firstItem="eg0-UK-wFw" firstAttribute="top" secondItem="ivk-3g-wVu" secondAttribute="bottom" constant="8" id="and-vn-jY4"/>
+                            <constraint firstItem="wMt-wa-ZNh" firstAttribute="centerX" secondItem="BGw-mY-k0S" secondAttribute="centerX" id="bkI-gP-q5l"/>
+                            <constraint firstItem="ivk-3g-wVu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="dTI-Ye-IRA"/>
+                            <constraint firstItem="eg0-UK-wFw" firstAttribute="centerX" secondItem="wMt-wa-ZNh" secondAttribute="centerX" id="j3O-4l-HlN"/>
+                            <constraint firstItem="wMt-wa-ZNh" firstAttribute="top" secondItem="eg0-UK-wFw" secondAttribute="bottom" constant="88" id="pTb-bZ-qRk"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="callAmbulanceButton" destination="bup-ud-VCR" id="sLU-ei-A29"/>
+                        <outlet property="logoImageView" destination="eg0-UK-wFw" id="eVW-83-AZd"/>
+                        <outlet property="middleButton" destination="fYC-fn-W46" id="trg-Os-Goe"/>
+                        <outlet property="outsideButton" destination="Ydx-5J-fwm" id="twB-jU-jNg"/>
+                        <segue destination="Zow-9N-G5D" kind="presentation" identifier="toDetailsVC" modalPresentationStyle="fullScreen" id="LfE-co-TcI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-469.46564885496178" y="-24.647887323943664"/>
+        </scene>
+        <!--DetailsVC-->
+        <scene sceneID="euc-B5-j6u">
+            <objects>
+                <viewController id="Zow-9N-G5D" customClass="DetailsVC" customModule="hemenSaglik" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="b1w-pO-EEA">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="EjC-mX-gKe"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="g5t-GC-Nbg"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lou-90-umh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="552" y="-25"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="hemenSaglik" width="656" height="687"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
